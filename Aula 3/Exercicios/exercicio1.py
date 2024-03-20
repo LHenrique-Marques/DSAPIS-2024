@@ -9,7 +9,7 @@ class Produto():
         return f"""
         ID:{self.id}
         Nome:{self.nome} 
-        Categoria:{self.nome}
+        Categoria:{self.categoria}
         """
 
     def get_id(self):
@@ -64,6 +64,9 @@ class listas():
             if iten.get_id() == id_buscada:
                 iten.set_nome(novo_nome)
 
+            
+            
+
 
 def menu():
     return("""
@@ -97,6 +100,7 @@ def inicializa():
                 lista1.mostra_itens()
                 try:
                     lista1.deleta_iten(int(input("Digite a ID do produto que deseja Remover: ")))
+                    print("Iten deletado com sucesso...")
                 except:
                     print("ID invalido.... tente novamente.")
 
@@ -113,6 +117,15 @@ def inicializa():
             
             if escolha == 5:
                 lista1.pesquisa_categoria(input("Digite o nome da Categoria que você deseja buscar: "))
+            
+            if escolha == 6:
+                try:
+                    lista1.muda_nome(int(input("Digite a ID do produto que você procura: ")),input("Digie o Novo nome do produto: "))
+                    print("Nome alterado com sucesso.....")
+
+                except:
+                    print("Ops... Não encontrei esta ID, tente novamente.")
+
         except:
             print("Opção invalida... Tente novamente...")
 
