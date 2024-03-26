@@ -20,3 +20,5 @@ function listar (){
 function main(){
     console.log(listar());
 }
+
+main();
