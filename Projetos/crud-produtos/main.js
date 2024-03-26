@@ -17,6 +17,6 @@ function listar (){
     return listaProdutos;
 }
 
-function main (){
-
+function main(){
+    console.log(listar());
 }
