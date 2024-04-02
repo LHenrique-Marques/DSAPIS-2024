@@ -13,9 +13,9 @@ function main() {
         preco: 9.20 
     });
 
-    console.log(produtoRepository.buscarPorId(5));
+    produtoRepository.deletar(2);
     console.log(produtoRepository.buscarPorId(2));
-    console.log(produtoRepository.listar());
+    console.log(produtoRepository.buscarPorId(3));
 }
 
 main();

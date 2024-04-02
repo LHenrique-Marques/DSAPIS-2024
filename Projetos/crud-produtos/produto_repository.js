@@ -31,8 +31,17 @@ function buscarPorId(id) {
     }
 }
 
+function deletar(id){
+    for(let indice in listaProdutos){
+        if(listaProdutos[indice].id === id){
+            listaProdutos.splice(indice,1)
+        }
+    }
+}
+
 module.exports = {
     listar,
     inserir,
-    buscarPorId
+    buscarPorId,
+    deletar
 }
