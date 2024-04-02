@@ -1,25 +1,21 @@
+const  produtoRepository = require('./produto_repository');
+let idGerador = 2;
+function main() {
+    console.log(produtoRepository.listar());
+    produtoRepository.inserir({ 
+        nome: "Feijao", 
+        categoria: "alimento", 
+        preco: 8.00 
+    });
 
-let listaProdutos = [
-    {
-        id:1,
-        nome: "Feijão",
-        categoria: "Alimento",
-        preco: 5.80
-    },
-    {
-        id: 2,
-        nome: "Leite",
-        categoria: "Bebida",
-        preco: 3.45
-    }
-];
-function listar (){
-    return listaProdutos;
+    produtoRepository.inserir({ 
+        nome: "Suco de laranja", 
+        categoria: "bebida", 
+        preco: 9.20 
+    });
+
+    console.log(produtoRepository.buscarPorId(5));
+    console.log(produtoRepository.buscarPorId(2));
 }
-
-function main(){
-    console.log(listar());
-}
-
 
 main();
