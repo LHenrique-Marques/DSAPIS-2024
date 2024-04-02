@@ -1,5 +1,4 @@
 const  produtoRepository = require('./produto_repository');
-let idGerador = 2;
 function main() {
     console.log(produtoRepository.listar());
     produtoRepository.inserir({ 
@@ -16,6 +15,7 @@ function main() {
 
     console.log(produtoRepository.buscarPorId(5));
     console.log(produtoRepository.buscarPorId(2));
+    console.log(produtoRepository.listar());
 }
 
 main();

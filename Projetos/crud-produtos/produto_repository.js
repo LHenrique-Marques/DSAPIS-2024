@@ -1,15 +1,16 @@
+let idGerador = 2;
 let listaProdutos = [
     {
-        id: 1,
         nome: "arroz",
         categoria: "alimento",
-        preco: 5.80
+        preco: 5.80,
+        id: 1
     },
     {
-        id: 2,
         nome: "leite",
         categoria: "bebida",
-        preco: 4.25
+        preco: 4.25,
+        id: 2
     }
 ];
 
@@ -28,4 +29,10 @@ function buscarPorId(id) {
             return produto;
         }
     }
+}
+
+module.exports = {
+    listar,
+    inserir,
+    buscarPorId
 }
